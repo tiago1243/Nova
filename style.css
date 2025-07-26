@@ -1,0 +1,385 @@
+/* Enhanced styles for Nova AI Assistant with API integrations */
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.sidebar {
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-content {
+    margin-left: 0;
+    height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        margin-left: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-content {
+        margin-left: 16.66666667%;
+    }
+}
+
+.chat-messages {
+    overflow-y: auto;
+    height: calc(100vh - 120px);
+    scroll-behavior: smooth;
+}
+
+.message {
+    margin-bottom: 1.5rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message-content {
+    max-width: 90%;
+}
+
+.user-message {
+    text-align: right;
+}
+
+.user-message .message-content {
+    margin-left: auto;
+}
+
+.user-message .message-text {
+    background-color: var(--bs-primary);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem 1rem 0.25rem 1rem;
+    display: inline-block;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.nova-message .message-text {
+    background-color: var(--bs-gray-800);
+    color: var(--bs-gray-100);
+    padding: 0.75rem 1rem;
+    border-radius: 1rem 1rem 1rem 0.25rem;
+    border-left: 3px solid var(--bs-primary);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.message-header {
+    margin-bottom: 0.5rem;
+}
+
+/* Enhanced knowledge response styling */
+.knowledge-response {
+    background-color: var(--bs-info);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.knowledge-source {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+/* Weather response styling */
+.weather-response {
+    background-color: var(--bs-success);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.weather-temp {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* News response styling */
+.news-response {
+    background-color: var(--bs-warning);
+    color: var(--bs-dark);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.news-article {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 0.5rem;
+}
+
+.news-article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.news-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.news-source {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* API Status indicators */
+.api-status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+}
+
+.status-online .fas {
+    color: var(--bs-success) !important;
+}
+
+.status-offline .fas {
+    color: var(--bs-danger) !important;
+}
+
+.status-no-key .fas {
+    color: var(--bs-warning) !important;
+}
+
+/* Daily plan styling */
+.daily-plan-container {
+    background-color: var(--bs-gray-900);
+    border: 1px solid var(--bs-primary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.time-block {
+    background-color: var(--bs-gray-800);
+    border-left: 3px solid var(--bs-info);
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.time-block-time {
+    font-weight: bold;
+    color: var(--bs-info);
+}
+
+/* Daily briefing styling */
+.daily-briefing {
+    background-color: var(--bs-gray-900);
+    border: 1px solid var(--bs-success);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.briefing-section {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--bs-gray-700);
+}
+
+.briefing-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Memory entry styling */
+.memory-entry {
+    background-color: var(--bs-gray-900);
+    border: 1px solid var(--bs-gray-700);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.memory-entry:hover {
+    border-color: var(--bs-primary);
+    transform: translateY(-1px);
+}
+
+.category-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.tag-badge {
+    font-size: 0.7rem;
+    background-color: var(--bs-info);
+    color: white;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    margin-right: 0.25rem;
+}
+
+/* Voice recording animation */
+.recording {
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.5) !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Loading states */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    opacity: 0.7;
+}
+
+.typing-dots {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    animation: typingDot 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typingDot {
+    0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+    40% { transform: scale(1); opacity: 1; }
+}
+
+/* Agent actions styling */
+.agent-action {
+    background-color: var(--bs-gray-800);
+    border: 1px solid var(--bs-info);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.agent-action:hover {
+    background-color: var(--bs-gray-700);
+    border-color: var(--bs-primary);
+}
+
+.action-priority-high {
+    border-left: 4px solid var(--bs-danger);
+}
+
+.action-priority-medium {
+    border-left: 4px solid var(--bs-warning);
+}
+
+.action-priority-low {
+    border-left: 4px solid var(--bs-success);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* Scrollbar styling */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: var(--bs-gray-900);
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: var(--bs-gray-600);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-gray-500);
+}
+
+/* Error message styling */
+.error-message {
+    background-color: var(--bs-danger);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Success message styling */
+.success-message {
+    background-color: var(--bs-success);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Knowledge URL styling */
+.knowledge-url {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.knowledge-url:hover {
+    color: white;
+    text-decoration: underline;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova - Your Enhanced AI Assistant</title>
+    
+    <!-- Bootstrap CSS with Replit theme -->
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <!-- Enhanced Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar bg-dark border-end">
+                <div class="d-flex flex-column h-100">
+                    <div class="p-3 border-bottom">
+                        <h4 class="text-primary mb-0">
+                            <i class="fas fa-robot me-2"></i>Nova
+                        </h4>
+                        <small class="text-muted">Enhanced AI Assistant</small>
+                    </div>
+                    
+                    <div class="flex-grow-1 p-3">
+                        <!-- Quick Actions -->
+                        <div class="mb-4">
+                            <h6 class="text-secondary mb-2">Quick Actions</h6>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary btn-sm" onclick="sendQuickMessage('show memory')">
+                                    <i class="fas fa-history me-1"></i>View Memory
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="sendQuickMessage('show category:task')">
+                                    <i class="fas fa-tasks me-1"></i>Show Tasks
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="sendQuickMessage('help')">
+                                    <i class="fas fa-question-circle me-1"></i>Help
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Knowledge Queries -->
+                        <div class="mb-4">
+                            <h6 class="text-secondary mb-2">🧠 Knowledge</h6>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-info btn-sm" onclick="sendQuickMessage('what is artificial intelligence')">
+                                    <i class="fas fa-brain me-1"></i>Ask Wikipedia
+                                </button>
+                                <button class="btn btn-outline-info btn-sm" onclick="sendQuickMessage('weather today')">
+                                    <i class="fas fa-cloud-sun me-1"></i>Get Weather
+                                </button>
+                                <button class="btn btn-outline-info btn-sm" onclick="sendQuickMessage('latest news')">
+                                    <i class="fas fa-newspaper me-1"></i>Show News
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- API Configuration -->
+                        <div class="mb-4">
+                            <h6 class="text-secondary mb-2">🔑 API Keys</h6>
+                            <div class="mb-2">
+                                <label class="form-label small">Weather API Key:</label>
+                                <div class="input-group input-group-sm">
+                                    <input type="password" class="form-control" id="weatherApiKey" placeholder="OpenWeatherMap API key">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="saveApiKey('weather')">
+                                        <i class="fas fa-save"></i>
+                                    </button>
+                                </div>
+                                <small class="text-muted">Get free key from <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a></small>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label small">News API Key:</label>
+                                <div class="input-group input-group-sm">
+                                    <input type="password" class="form-control" id="newsApiKey" placeholder="NewsAPI key">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="saveApiKey('news')">
+                                        <i class="fas fa-save"></i>
+                                    </button>
+                                </div>
+                                <small class="text-muted">Get free key from <a href="https://newsapi.org/" target="_blank">NewsAPI</a></small>
+                            </div>
+                        </div>
+
+                        <!-- Agent Actions -->
+                        <div class="mb-4">
+                            <h6 class="text-secondary mb-2">🤖 Agent Actions</h6>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-info btn-sm" onclick="requestDailyPlan()">
+                                    <i class="fas fa-calendar-day me-1"></i>Plan My Day
+                                </button>
+                                <button class="btn btn-outline-info btn-sm" onclick="requestDailyBriefing()">
+                                    <i class="fas fa-newspaper me-1"></i>Daily Briefing
+                                </button>
+                                <button class="btn btn-outline-info btn-sm" onclick="getInsights()">
+                                    <i class="fas fa-chart-line me-1"></i>Get Insights
+                                </button>
+                                <button class="btn btn-outline-info btn-sm" onclick="showAgentStatus()">
+                                    <i class="fas fa-cog me-1"></i>Agent Status
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Voice Controls -->
+                        <div class="mb-4">
+                            <h6 class="text-secondary mb-2">Voice Controls</h6>
+                            <div class="d-grid gap-2">
+                                <button id="voiceBtn" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-microphone me-1"></i>
+                                    <span id="voiceBtnText">Start Voice</span>
+                                </button>
+                                <button id="speakToggle" class="btn btn-outline-secondary btn-sm">
+                                    <i class="fas fa-volume-up me-1"></i>
+                                    <span id="speakToggleText">TTS: On</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- API Status -->
+                        <div class="mb-4">
+                            <h6 class="text-secondary mb-2">API Status</h6>
+                            <div id="apiStatus" class="small">
+                                <div class="api-status-item">
+                                    <i class="fas fa-circle text-muted me-1"></i>
+                                    <span>Wikipedia: <span id="wikipedia-status">Checking...</span></span>
+                                </div>
+                                <div class="api-status-item">
+                                    <i class="fas fa-circle text-muted me-1"></i>
+                                    <span>Weather: <span id="weather-status">Checking...</span></span>
+                                </div>
+                                <div class="api-status-item">
+                                    <i class="fas fa-circle text-muted me-1"></i>
+                                    <span>News: <span id="news-status">Checking...</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Memory Stats -->
+                        <div id="statsContainer" class="mb-4">
+                            <h6 class="text-secondary mb-2">Memory Stats</h6>
+                            <div id="statsContent" class="small text-muted">
+                                Loading...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Chat Area -->
+            <div class="col-md-9 col-lg-10 main-content">
+                <div class="d-flex flex-column h-100">
+                    <!-- Header -->
+                    <div class="chat-header p-3 border-bottom bg-dark">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h5 class="mb-0">Chat with Nova</h5>
+                                <small class="text-muted">Enhanced with Wikipedia, Weather & News APIs</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span id="statusIndicator" class="badge bg-success me-2">
+                                    <i class="fas fa-circle"></i> Online
+                                </span>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="clearChat()">
+                                    <i class="fas fa-trash me-1"></i>Clear Chat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chat Messages -->
+                    <div class="flex-grow-1 chat-messages p-3" id="chatMessages">
+                        <div class="message nova-message">
+                            <div class="message-content">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar bg-primary me-3">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="message-header">
+                                            <strong class="text-primary">Nova</strong>
+                                            <small class="text-muted ms-2">Just now</small>
+                                        </div>
+                                        <div class="message-text">
+                                            Hello! I'm Nova, your enhanced AI assistant. I can now help you with:
+                                            <br><br>
+                                            🧠 <strong>Knowledge queries</strong> - Ask me anything using Wikipedia
+                                            <br>🌤️ <strong>Weather information</strong> - Get current conditions and forecasts
+                                            <br>📰 <strong>Latest news</strong> - Stay updated with current events
+                                            <br>📋 <strong>Task management</strong> - Organize your tasks, ideas, and reminders
+                                            <br>🤖 <strong>Smart planning</strong> - Get AI-powered daily plans and insights
+                                            <br><br>
+                                            Try saying: "What is quantum computing?", "Weather in New York", or "Latest news headlines"
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Input Area -->
+                    <div class="chat-input p-3 border-top bg-dark">
+                        <!-- Wikipedia Mode Banner -->
+                        <div id="wikipediaMode" class="alert alert-info mb-2" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <i class="fas fa-brain me-2"></i>
+                                    <strong>Wikipedia Mode:</strong> Ask any question and I'll search Wikipedia for you
+                                </div>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="exitWikipediaMode()">Exit</button>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <button id="voiceBtnMain" class="btn btn-outline-primary" onclick="if(window.app) window.app.toggleVoiceRecording()" title="Voice Input">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button id="wikipediaBtn" class="btn btn-outline-info" onclick="enterWikipediaMode()" title="Ask Wikipedia Mode">
+                                <i class="fas fa-brain"></i>
+                            </button>
+                            <input type="text" id="messageInput" class="form-control" 
+                                   placeholder="Ask me anything - knowledge, weather, news, or manage your tasks..." 
+                                   onkeypress="handleKeyPress(event)">
+                            <button class="btn btn-primary" onclick="if(window.app) window.app.sendMessage()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="mt-2">
+                            <small class="text-muted">
+                                <i class="fas fa-lightbulb me-1"></i>
+                                Try: "What is machine learning?", "Weather in London", "Today's news", or click <i class="fas fa-brain"></i> for Wikipedia mode
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading indicator -->
+    <div id="loadingIndicator" class="d-none position-fixed top-50 start-50 translate-middle">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

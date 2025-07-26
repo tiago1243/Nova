@@ -1,0 +1,74 @@
+{
+  "wiki_what_is_thermodynamics": {
+    "data": {
+      "title": "Thermodynamics",
+      "summary": "Thermodynamics is a branch of physics that deals with heat, work, and temperature, and their relation to energy, entropy, and the physical properties of matter and radiation. The behavior of these quantities is governed by the four laws of thermodynamics, which convey a quantitative description using measurable macroscopic physical quantities but may be explained in terms of microscopic constituents by statistical mechanics. Thermodynamics applies to various topics in science and engineering, especially physical chemistry, biochemistry, chemical engineering, and mechanical engineering, as well as other complex fields such as meteorology.",
+      "url": "https://en.wikipedia.org/wiki/Thermodynamics",
+      "source": "Wikipedia"
+    },
+    "expires_at": 1753543862.4459238,
+    "created_at": 1753540262.4459243
+  },
+  "weather_indonesia": {
+    "data": {
+      "location": "Indonesia",
+      "temperature": 22,
+      "description": "Few Clouds",
+      "humidity": 84,
+      "wind_speed": 1.53,
+      "country": "ID"
+    },
+    "expires_at": 1753542611.2564147,
+    "created_at": 1753542011.2564156
+  },
+  "wiki_what_is_time": {
+    "data": {
+      "title": "Time",
+      "summary": "Time is the continuous progression of existence that occurs in an apparently irreversible succession from the past, through the present, and into the future. Time dictates all forms of action, age, and causality, being a component quantity of various measurements used to sequence events, to compare the duration of events, and to quantify rates of change of quantities in material reality or in the conscious experience. Time is often referred to as a fourth dimension, along with three spatial dimensions.",
+      "url": "https://en.wikipedia.org/wiki/Time",
+      "source": "Wikipedia"
+    },
+    "expires_at": 1753545700.92089,
+    "created_at": 1753542100.9208903
+  },
+  "wiki_what_is_physics": {
+    "data": {
+      "title": "Physics",
+      "summary": "Physics is the scientific study of matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force. It is one of the most fundamental scientific disciplines. A scientist who specializes in the field of physics is called a physicist.",
+      "url": "https://en.wikipedia.org/wiki/Physics",
+      "source": "Wikipedia"
+    },
+    "expires_at": 1753545708.871732,
+    "created_at": 1753542108.8717325
+  },
+  "wiki_what_is_a_proton": {
+    "data": {
+      "title": "Proton",
+      "summary": "A proton is a stable subatomic particle, symbol p, H+, or 1H+ with a positive electric charge of +1\u00a0e (elementary charge). Its mass is slightly less than the mass of a neutron and approximately 1836 times the mass of an electron (the proton-to-electron mass ratio). Protons and neutrons, each with a mass of approximately one dalton, are jointly referred to as nucleons (particles present in atomic nuclei).",
+      "url": "https://en.wikipedia.org/wiki/Proton",
+      "source": "Wikipedia"
+    },
+    "expires_at": 1753545744.0370624,
+    "created_at": 1753542144.037063
+  },
+  "wiki_what_is_a_photon": {
+    "data": {
+      "title": "Photon",
+      "summary": "A photon is an elementary particle that is a quantum of the electromagnetic field, including electromagnetic radiation such as light and radio waves, and the force carrier for the electromagnetic force. Photons are massless particles that can move no faster than the speed of light measured in vacuum. The photon belongs to the class of boson particles.",
+      "url": "https://en.wikipedia.org/wiki/Photon",
+      "source": "Wikipedia"
+    },
+    "expires_at": 1753545752.9905634,
+    "created_at": 1753542152.9905639
+  },
+  "wiki_who_is_albert_einstein": {
+    "data": {
+      "title": "Albert Einstein",
+      "summary": "Albert Einstein was a German-born theoretical physicist who is best known for developing the theory of relativity. Einstein also made important contributions to quantum mechanics. His mass\u2013energy equivalence formula E = mc2, which arises from special relativity, has been called \"the world's most famous equation\". He received the 1921 Nobel Prize in Physics for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect.",
+      "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+      "source": "Wikipedia"
+    },
+    "expires_at": 1753545766.018155,
+    "created_at": 1753542166.0181556
+  }
+}

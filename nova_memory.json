@@ -1,0 +1,366 @@
+[
+  {
+    "timestamp": "2025-07-25 18:55:29",
+    "category": "recurring_reminder",
+    "text": "daily briefing",
+    "tags": [],
+    "due_date": null,
+    "recurring": "daily"
+  },
+  {
+    "timestamp": "2025-07-25 18:59:03",
+    "category": "note",
+    "text": "Asked about: what is artificial intelligence",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 18:59:38",
+    "category": "note",
+    "text": "Asked about: what is artificial intelligence",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 18:59:47",
+    "category": "task",
+    "text": "Donald trump",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 18:59:57",
+    "category": "note",
+    "text": "Asked about: Who is Donald trump",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:00:19",
+    "category": "task",
+    "text": "Who  is \u201cDonald trump\u201d",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:04:32",
+    "category": "note",
+    "text": "Asked about: What is machine learning?",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:13:09",
+    "category": "note",
+    "text": "Asked about: what is artificial intelligence",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:13:15",
+    "category": "note",
+    "text": "Asked about: Who is Donald trump",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:13:44",
+    "category": "uncategorized",
+    "text": "Who won the last nba championship",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:13:51",
+    "category": "note",
+    "text": "Asked about: what is the NBA",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:14:01",
+    "category": "uncategorized",
+    "text": "Who won NBA championship",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:14:09",
+    "category": "uncategorized",
+    "text": "who won the NbA championship",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:14:20",
+    "category": "reminder",
+    "text": "Remind me to update api features",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:14:43",
+    "category": "recurring_reminder",
+    "text": "daily briefing",
+    "tags": [],
+    "due_date": null,
+    "recurring": "daily"
+  },
+  {
+    "timestamp": "2025-07-25 19:16:32",
+    "category": "uncategorized",
+    "text": "When was the second world war",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:16:39",
+    "category": "uncategorized",
+    "text": "when was ww2",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:20:42",
+    "category": "note",
+    "text": "Asked about: Who won the last FIFA World Cup",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:20:52",
+    "category": "note",
+    "text": "Asked about: Who is Donald trump",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 19:21:24",
+    "category": "note",
+    "text": "Asked about: What is an atomic bomb",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 20:40:36",
+    "category": "idea",
+    "text": "I have a new idea for an ai chatbot called nova",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 20:40:49",
+    "category": "note",
+    "text": "Asked about: Ai chatbots",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 20:40:59",
+    "category": "note",
+    "text": "Asked about: What is a chatbot",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 20:41:29",
+    "category": "note",
+    "text": "Asked about: show memory",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 20:57:35",
+    "category": "note",
+    "text": "Asked about: what is artificial intelligence",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 20:57:59",
+    "category": "note",
+    "text": "Asked about: Who is LeBron James",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 20:58:18",
+    "category": "note",
+    "text": "Asked about: How many championships does LeBron James have",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 23:07:08",
+    "category": "note",
+    "text": "Asked about: What is novichok",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-25 23:31:33",
+    "category": "recurring_reminder",
+    "text": "daily briefing",
+    "tags": [],
+    "due_date": null,
+    "recurring": "daily"
+  },
+  {
+    "timestamp": "2025-07-26 01:42:21",
+    "category": "note",
+    "text": "Asked about: What is a world war",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 01:42:35",
+    "category": "uncategorized",
+    "text": "When was the Second World War",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 01:42:46",
+    "category": "note",
+    "text": "Asked about: what is the second world war",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 01:43:39",
+    "category": "reminder",
+    "text": "Remind me to take the trash out",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 01:43:50",
+    "category": "reminder",
+    "text": "remind me to take the trash out tomorrow",
+    "tags": [],
+    "due_date": "2025-07-27 01:43:50"
+  },
+  {
+    "timestamp": "2025-07-26 01:44:27",
+    "category": "recurring_reminder",
+    "text": "I want to brainstorm every day at 9am",
+    "tags": [],
+    "due_date": null,
+    "recurring": "every day"
+  },
+  {
+    "timestamp": "2025-07-26 01:44:49",
+    "category": "task",
+    "text": "I want to finish my project",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 01:45:05",
+    "category": "note",
+    "text": "Asked about: What is the weather like in D\u00fcsseldorf",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 02:13:39",
+    "category": "note",
+    "text": "Asked about: what is artificial intelligence",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 14:31:02",
+    "category": "note",
+    "text": "Asked about: What is thermodynamics",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 14:31:31",
+    "category": "recurring_reminder",
+    "text": "daily briefing",
+    "tags": [],
+    "due_date": null,
+    "recurring": "daily"
+  },
+  {
+    "timestamp": "2025-07-26 14:46:23",
+    "category": "uncategorized",
+    "text": "Calendar",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:00:21",
+    "category": "note",
+    "text": "Asked about: what is the weather tomorrow",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:00:37",
+    "category": "task",
+    "text": "Remind me to create a shopping list",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:01:40",
+    "category": "note",
+    "text": "Asked about: What is time",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:01:48",
+    "category": "note",
+    "text": "Asked about: what is physics",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:02:15",
+    "category": "note",
+    "text": "Asked about: what are photons",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:02:24",
+    "category": "note",
+    "text": "Asked about: what is a proton",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:02:32",
+    "category": "note",
+    "text": "Asked about: what is a photon",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:02:46",
+    "category": "note",
+    "text": "Asked about: who is Albert Einstein",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:02:55",
+    "category": "uncategorized",
+    "text": "who was albert Einstein",
+    "tags": [],
+    "due_date": null
+  },
+  {
+    "timestamp": "2025-07-26 15:03:05",
+    "category": "task",
+    "text": "I need to finish my project #nova",
+    "tags": [
+      "#nova"
+    ],
+    "due_date": null
+  }
+]
